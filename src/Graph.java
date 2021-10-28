@@ -1,11 +1,15 @@
 public class Graph {
-	GraphNode[] nodes;
+	private int currentIndex;
+	private GraphNode[] nodes;
 
-	Graph(int nNodes) {
-		nodes = new GraphNode[nNodes];
+	public int getNumNodes() {
+		return nodes.length;
 	}
 
-	private int currentIndex = 0;
+	Graph(int nNodes) {
+		currentIndex = 0;
+		nodes = new GraphNode[nNodes];
+	}
 
 	void addNode(int x, int y) {
 		assert currentIndex < nodes.length;
@@ -19,5 +23,9 @@ public class Graph {
 
 		n1.addNeighbor(n2);
 		n2.addNeighbor(n1);
+	}
+
+	public GraphNode[] getNodes() {
+		return nodes;
 	}
 }
