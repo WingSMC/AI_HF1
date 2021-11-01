@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -47,8 +48,11 @@ public class Main {
 				String[] line = in.nextLine().split("\t");
 				graph.addEdge(Integer.parseInt(line[0]), Integer.parseInt(line[1]));
 			}
-			System.out.println("--- Graph built ---");
 		}
+
+		// TODO:
+		// Calculate and Print results
+		// List.of(Main.paths).stream().parallel()
 	}
 }
 

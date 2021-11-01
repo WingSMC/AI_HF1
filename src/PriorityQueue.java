@@ -22,8 +22,8 @@ public class PriorityQueue {
 		QueueNode temp;
 
 		// Search for existing node (not head)
-		for (temp = head; temp.next != null && temp.next.graphNode != node; temp = temp.next) {
-		}
+		for (temp = head; temp.next != null && temp.next.graphNode != node; temp = temp.next)
+			;
 
 		QueueNode inserted = temp.next;
 
@@ -38,12 +38,11 @@ public class PriorityQueue {
 			temp.next = inserted.next;
 		}
 
-		// Find insertionLocation
-		for (temp = head; temp.next != null; temp = temp.next) {
-			if (temp.priority < newPriority && newPriority <= temp.next.priority) {
-				break;
-			}
-		}
+		// TODO: validate this
+		// Find insertion location
+		for (temp = head; temp.next != null
+				&& !(temp.priority < newPriority && newPriority <= temp.next.priority); temp = temp.next)
+			;
 
 		// Insert to new location
 		inserted.next = temp.next;
