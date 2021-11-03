@@ -52,7 +52,7 @@ public class Main {
 
 		// TODO:
 		// Calculate and Print results
-		// List.of(Main.paths).stream().parallel()
+		// List.of(Main.paths).stream().map
 	}
 }
 

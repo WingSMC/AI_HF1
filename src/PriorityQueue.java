@@ -1,4 +1,3 @@
-
 public class PriorityQueue {
 	private QueueNode head;
 
